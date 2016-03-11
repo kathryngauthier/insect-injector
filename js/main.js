@@ -1,26 +1,46 @@
-// Create your variable here, name it `insects`
-
-var insects = function (bugs){
-  name: 'ant-nest-beetle',
-  img: 'ant-nest-beetle.jpg',
-  family: 'Carabidae',
-  size: [6,20],
-  eatsDung: false,
-  eatsPlants: false
-}
-},
-  // body...
-}
-"Name","Image","Family","Min. size","Max. size","Eats insects","Eats dung","Eats plants"
-"Ant Nest Beetle","ant-nest-beetle.jpg","Carabidae","6","20","Yes","No","No"
-"Dung Beetle","dung-beetle.jpg","Scarabidae","20","30","No","Yes","No"
-"Stag Beetle","stag-beetle.jpg","Lucanidae","5","120","No","No","Yes"
-"Tortoise Beetle","tortoise-beetle.jpg","Cassidinae","1","18","No","No","Yes"
-
-
-// ##########################################################
-// START DO NOT CHANGE ZONE
-// ##########################################################
+var insects = [
+  {
+    name: 'Ant Nest Beetle',
+    img: 'ant-nest-beetle.jpg',
+    size: [6, 20],
+    family: 'Carabidae',
+    food: {
+      eatsInsects: true,
+      eatsDung: false,
+      eatsPlants: false,
+    }
+  }, {
+    name: 'Dung Beetle',
+    img: 'dung-beetle.jpg',
+    size: [20, 30],
+    family: 'Scarabidae',
+    food: {
+      eatsInsects: false,
+      eatsDung: true,
+      eatsPlants: false,
+    }
+  }, {
+    name: 'Stag Beetle',
+    img: 'stag-beetle.jpg',
+    size: [5, 120],
+    family: 'Lucanidae',
+    food: {
+      eatsInsects: false,
+      eatsDung: false,
+      eatsPlants: true,
+    }
+  }, {
+    name: 'Tortoise Beetle',
+    img: 'tortoise-beetle.jpg',
+    size: [1, 18],
+    family: 'Cassidinae',
+    food: {
+      eatsInsects: false,
+      eatsDung: false,
+      eatsPlants: true,
+    }
+  }
+];
 
 var writeInsects = function (bugs) {
   document.write('<h1>Insects</h1>');
@@ -62,7 +82,3 @@ var writeInsects = function (bugs) {
 };
 
 writeInsects(insects);
-
-// ##########################################################
-// END DO NOT CHANGE ZONE
-// ##########################################################
